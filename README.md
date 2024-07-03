@@ -29,7 +29,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Aroma College, take a look at [acohat-college](https://acohat-college.vercel.app/)
 
 ## Deploy on Vercel
 
