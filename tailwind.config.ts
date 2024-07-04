@@ -15,7 +15,7 @@ const config: Config = {
       },
       screens: {
         tablet: "991px",
-        laptop: "992px",
+        laptop: "1200px",
       },
       // container: {
       //   center: true,
