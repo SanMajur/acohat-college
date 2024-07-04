@@ -17,6 +17,10 @@ const config: Config = {
         tablet: "991px",
         laptop: "992px",
       },
+      // container: {
+      //   center: true,
+      //   padding: "2rem",
+      // },
     },
   },
   plugins: [],
