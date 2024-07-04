@@ -56,30 +56,30 @@ export default function Logo() {
             <form className=" mb-4 lg:mb-0">
               <div className="flex  w-full items-center">
                 <label htmlFor="select-menu" className="mr-1">
-                  <span className="">I am</span>
+                  <span className="mr-2">I am</span>
                 </label>
                 <select
                   name="select-menu"
                   id="select-menu"
-                  className="bg-[#f4f6f9] border-b-[3px] border-[#cbd1e0] text-gray-600 text-base font-bold outline-none py-1.5 px-3 flex-1 hover:border-[#ab0620] rounded-none"
+                  className="bg-[#f4f6f9] border-b-[3px] border-[#cbd1e0] text-gray-600 text-base font-bold outline-none py-2 px-3 flex-1 hover:border-[#ab0620] rounded-none"
                 >
                   <option
-                    className="w-96 p-2"
+                    className="w-96 py-3 px-4"
                     value="choose an option"
                     selected
                   >
                     choose an option
                   </option>
-                  <option className="w-96 p-2" value="a future student">
+                  <option className="w-96 py-3 px-4" value="a future student">
                     a future student
                   </option>
-                  <option className="w-96 p-2" value="a current student">
+                  <option className="w-96 py-3 px-4" value="a current student">
                     a current student
                   </option>
-                  <option className="w-96 p-2" value="an alumni member">
+                  <option className="w-96 py-3 px-4" value="an alumni member">
                     an alumni member
                   </option>
-                  <option className="w-96 p-2" value="a donor">
+                  <option className="w-96 py-3 px-4" value="a donor">
                     a donor
                   </option>
                 </select>
