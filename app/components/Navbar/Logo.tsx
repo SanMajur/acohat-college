@@ -6,15 +6,23 @@ import { BiChevronDown } from "react-icons/bi";
 import Link from "next/link";
 import { useState } from "react";
 import { MdClose, MdHome } from "react-icons/md";
+import { motion } from "framer-motion";
 
 export default function Logo() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
   const handleToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleClickAway = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <div className="flex flex-col">
+      <div className="" onClick={handleClickAway}></div>
       <div className="bg-red-900" aria-label="upper nav">
         <div className="flex justify-end gap-4 py-2 px-4 lg:px-0 items-center container laptop:max-w-[1140px] mx-auto text-white">
           <form className="flex gap-2 relative">
@@ -43,7 +51,12 @@ export default function Logo() {
             <span className="text-[8px]">MENU</span>
           </button>
           {isMenuOpen && (
-            <div className="fixed right-0 z-50 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] flex flex-col transition duration-300 ease-in-out translate-x-0">
+            <motion.div
+              animate={isMenuOpen ? "open" : "closed"}
+              variants={variants}
+              transition={{ delay: 1 }}
+              className="fixed right-0 z-50 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] flex flex-col transition duration-300 ease-in-out translate-x-0"
+            >
               <div className="flex justify-between items-center px-5 pt-2 pb-1 bg-red-900 text-white">
                 <Link href="/">
                   <MdHome size={20} color="white" />
@@ -57,7 +70,75 @@ export default function Logo() {
                   <span className="text-[8px]">CLOSE</span>
                 </button>
               </div>
-            </div>
+              <div className="flex flex-col px-8 py-6 gap-4">
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/"
+                >
+                  Home
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/about"
+                >
+                  About
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/contact"
+                >
+                  Contact us
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/courses"
+                >
+                  All Courses
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/courses/diploma"
+                >
+                  Diploma Course
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/courses/certificate"
+                >
+                  Certificate Course
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/courses/short-courses"
+                >
+                  Short Course
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/courses/languages"
+                >
+                  Languages
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/for-students"
+                >
+                  For Students
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/for-students/registration"
+                >
+                  Registration Details
+                </Link>
+                <Link
+                  className="uppercase hover:bg-slate-500 hover:px-6 hover:py-4"
+                  href="/for-students/banking"
+                >
+                  Banking Details
+                </Link>
+              </div>
+            </motion.div>
           )}
         </div>
       </div>
