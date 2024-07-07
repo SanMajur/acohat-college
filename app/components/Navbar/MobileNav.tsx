@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 
 const MobileNav = (props: any) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col px-4">
       <div className="flex bg-white items-center ">
         <input
           className="p-4 text-sm border-r border-gray-400 outline-none text-gray-600 w-[88%]"
@@ -17,6 +17,15 @@ const MobileNav = (props: any) => {
         </button>
       </div>
       <ul className="flex flex-col px-4 py-8 gap-4">
+        <li className="">
+          <Link
+            href="/about"
+            className="block py-3 px-5 hover:bg-blue-400"
+            onClick={props.closeMenu}
+          >
+            About us
+          </Link>
+        </li>
         <li className="">
           <Link
             href="/courses/"
@@ -41,15 +50,7 @@ const MobileNav = (props: any) => {
             </span>
           </Link>
         </li>
-        <li className="">
-          <Link
-            href="/about"
-            className="block py-3 px-5 hover:bg-blue-400"
-            onClick={props.closeMenu}
-          >
-            About us
-          </Link>
-        </li>
+
         <li className="">
           <Link
             href="/contact"
@@ -57,6 +58,24 @@ const MobileNav = (props: any) => {
             onClick={props.closeMenu}
           >
             Contact us
+          </Link>
+        </li>
+        <li className="">
+          <Link
+            href="/galary"
+            className="block py-3 px-5 hover:bg-blue-400"
+            onClick={props.closeMenu}
+          >
+            Galary
+          </Link>
+        </li>
+        <li className="">
+          <Link
+            href="/downloads"
+            className="block py-3 px-5 hover:bg-blue-400"
+            onClick={props.closeMenu}
+          >
+            Downloads
           </Link>
         </li>
       </ul>

@@ -13,9 +13,9 @@ export default function UpperNav() {
   };
 
   return (
-    <div className="bg-red-900" aria-label="upper nav">
+    <div className="bg-red-900 px-4" aria-label="upper nav">
       <div className="flex justify-end gap-4 py-2 px-4 lg:px-0 items-center laptop:max-w-[1140px] mx-auto text-white">
-        <div className="flex gap-2 relative">
+        <div className="flex gap-4 relative">
           <div className="hidden tablet:flex bg-white items-center ">
             <input
               className="py-3 px-2 text-sm border-r border-gray-400 outline-none text-gray-600"
