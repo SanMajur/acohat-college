@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { MdClose, MdHome } from "react-icons/md";
 import Link from "next/link";
 import MobileNav from "./mobile/MobileNav";
+import clsx from "clsx";
 
 export default function UpperNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,36 +44,30 @@ export default function UpperNav() {
           <CiMenuFries size={25} color="white" />
           <span className="text-[10px]">MENU</span>
         </button>
-
         <div
-          className={
-            isMenuOpen
-              ? "fixed  right-0 z-50 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] ease-in-out duration-500 lg:hidden"
-              : "fixed -right-[100%]  top-0 ease-in-out duration-500 "
-          }
+          className={clsx(
+            "fixed h-full w-screen bg-black/30 lg:hidden backdrop-blur-sm top-0 right-0 transition-all duration-700 ease-in-out translate-x-full",
+            isMenuOpen && "-translate-x-0"
+          )}
         >
-          <div
-            className={
-              isMenuOpen
-                ? "flex justify-between items-center px-5 py-2 bg-red-900 text-white"
-                : ""
-            }
-          >
-            <Link href="/" onClick={handleToggle}>
-              <MdHome size={25} color="white" />
-              <span className="text-[10px]">HOME</span>
-            </Link>
-            <button
-              className="flex flex-col items-center gap-2 font-bold "
-              onClick={handleToggle}
-            >
-              <MdClose size={25} color="white" />
-              <span className="text-[10px]">CLOSE</span>
-            </button>
-          </div>
-          {/* Mobile Nav */}
-          <div className="">
-            <MobileNav closeMenu={handleToggle} />
+          <div className="fixed  right-0 z-50 bottom-0 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] ease-in-out duration-500 lg:hidden">
+            <div className="flex justify-between items-center px-5 py-2 bg-red-900 text-white">
+              <Link href="/" onClick={handleToggle}>
+                <MdHome size={25} color="white" />
+                <span className="text-[10px]">HOME</span>
+              </Link>
+              <button
+                className="flex flex-col items-center gap-2 font-bold "
+                onClick={handleToggle}
+              >
+                <MdClose size={25} color="white" />
+                <span className="text-[10px]">CLOSE</span>
+              </button>
+            </div>
+            {/* Mobile Nav */}
+            <div className="">
+              <MobileNav closeMenu={handleToggle} />
+            </div>
           </div>
         </div>
       </div>
