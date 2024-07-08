@@ -1,7 +1,7 @@
 import React from "react";
-import UpperNav from "./UpperNav";
-import DesktopNav from "./DesktopNav";
 import Logo from "./Logo";
+import DesktopNav from "./DesktopNav";
+import UpperNav from "./UpperNav";
 
 export default function Navbar() {
   return (

@@ -4,7 +4,7 @@ import { CiMenuFries, CiSearch } from "react-icons/ci";
 import React, { useState, useEffect } from "react";
 import { MdClose, MdHome } from "react-icons/md";
 import Link from "next/link";
-import MobileNav from "./mobile/MobileNav";
+import MobileNav from "./Mobile/MobileNav";
 
 export default function UpperNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

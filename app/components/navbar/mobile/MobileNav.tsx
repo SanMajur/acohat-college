@@ -2,9 +2,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
-import Dropdown from "../Dropdown";
-import IconSwitcher from "./IconSwitcher";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import Dropdown from "../Dropdown";
 
 const MobileNav = ({ closeMenu }: { closeMenu: any }) => {
   const [dropdown, setDropdown] = useState(false);
