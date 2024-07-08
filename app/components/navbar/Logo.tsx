@@ -26,10 +26,10 @@ export default function Logo() {
             aria-label="cta div"
           >
             <div className="flex flex-col lg:flex-row text-center mt-2 md:mt-4 lg:gap-4 lg:mt-0">
-              <button className=" py-2 my-2 border border-red-900 text-red-900 lg:py-1.5 lg:px-16">
+              <button className=" py-2 my-2 border border-red-900 text-red-900 lg:py-1.5 lg:px-16  hover:bg-red-900 hover:text-white">
                 Visit
               </button>
-              <button className="text-white bg-red-900 py-2 my-2 lg:py-1.5 lg:px-16">
+              <button className="text-white bg-red-900 py-2 my-2 lg:py-1.5 lg:px-16 hover:bg-white hover:text-red-900 border border-red-900">
                 Apply Now
               </button>
             </div>

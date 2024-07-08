@@ -15,7 +15,7 @@ export default function UpperNav() {
 
   return (
     <div className="bg-red-900 px-4" aria-label="upper nav">
-      <div className="flex justify-end gap-4 py-2 px-4 lg:px-0 items-center laptop:max-w-[1140px] mx-auto text-white">
+      <div className="flex justify-start lg:justify-end gap-4 py-2 px-4 lg:px-0 items-center laptop:max-w-[1140px] mx-auto text-white">
         <div className="flex gap-4 relative">
           <div className="hidden tablet:flex bg-white items-center ">
             <input
@@ -26,36 +26,33 @@ export default function UpperNav() {
               <CiSearch />
             </button>
           </div>
-          <button
-            className="flex flex-col items-center gap-2 font-bold tablet:hidden"
-            onClick={handleToggle}
-          >
-            <CiSearch size={25} color="white" />
-            <span className="text-[10px]">SEARCH</span>
-          </button>
+
           <button className="hidden tablet:flex gap-2 items-center border px-4 border-red-500">
             Resources <BiChevronDown size={20} />
           </button>
         </div>
         <button
           className="flex flex-col items-center gap-2 font-bold tablet:hidden"
-          onClick={handleToggle}
+          onClick={() => setIsMenuOpen(true)}
         >
           <CiMenuFries size={25} color="white" />
           <span className="text-[10px]">MENU</span>
         </button>
+        <button
+          className="flex flex-col items-center gap-2 font-bold tablet:hidden"
+          onClick={() => setIsMenuOpen(true)}
+        >
+          <CiSearch size={25} color="white" />
+          <span className="text-[10px]">SEARCH</span>
+        </button>
         <div
           className={clsx(
-            "fixed h-full w-screen bg-black/30 lg:hidden backdrop-blur-sm top-0 right-0 transition-all duration-700 ease-in-out translate-x-full",
-            isMenuOpen && "-translate-x-0"
+            "fixed h-full w-screen bg-black/30 lg:hidden backdrop-blur-sm top-0 right-0 transition duration-700 ease-in-out -translate-x-full",
+            isMenuOpen && "translate-x-0"
           )}
         >
-          <div className="fixed  right-0 z-50 bottom-0 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] ease-in-out duration-500 lg:hidden">
+          <div className="fixed  left-0 z-50 bottom-0 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] ease-in-out duration-500 lg:hidden">
             <div className="flex justify-between items-center px-5 py-2 bg-red-900 text-white">
-              <Link href="/" onClick={handleToggle}>
-                <MdHome size={25} color="white" />
-                <span className="text-[10px]">HOME</span>
-              </Link>
               <button
                 className="flex flex-col items-center gap-2 font-bold "
                 onClick={handleToggle}
@@ -63,6 +60,10 @@ export default function UpperNav() {
                 <MdClose size={25} color="white" />
                 <span className="text-[10px]">CLOSE</span>
               </button>
+              <Link href="/" onClick={handleToggle}>
+                <MdHome size={25} color="white" />
+                <span className="text-[10px]">HOME</span>
+              </Link>
             </div>
             {/* Mobile Nav */}
             <div className="">
