@@ -1,7 +1,7 @@
 import React from "react";
-import Logo from "./Logo";
 import UpperNav from "./UpperNav";
 import DesktopNav from "./DesktopNav";
+import Logo from "./Logo";
 
 export default function Navbar() {
   return (
@@ -10,6 +10,7 @@ export default function Navbar() {
       <Logo />
       <hr />
       <DesktopNav />
+      <hr />
     </div>
   );
 }

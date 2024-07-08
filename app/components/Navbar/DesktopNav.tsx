@@ -22,20 +22,14 @@ export default function DesktopNav() {
         </Link>
       </li>
       <li className="">
-        <Link
-          href="/courses"
-          className="flex py-4 px-5 hover:bg-blue-100 items-center"
-        >
+        <button className="flex py-4 px-5 hover:bg-blue-100 items-center">
           All Courses <BiChevronDown size={20} />
-        </Link>
+        </button>
       </li>
       <li className="">
-        <Link
-          href="/for-students"
-          className="flex py-4 px-5 hover:bg-blue-100 items-center"
-        >
+        <button className="flex py-4 px-5 hover:bg-blue-100 items-center">
           For Students <BiChevronDown size={20} />
-        </Link>
+        </button>
       </li>
       <li className="">
         <Link

@@ -4,7 +4,7 @@ import { CiMenuFries, CiSearch } from "react-icons/ci";
 import React, { useState, useEffect } from "react";
 import { MdClose, MdHome } from "react-icons/md";
 import Link from "next/link";
-import MobileNav from "./MobileNav";
+import MobileNav from "./mobile/MobileNav";
 
 export default function UpperNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,15 +47,15 @@ export default function UpperNav() {
         <div
           className={
             isMenuOpen
-              ? "fixed  right-0 z-50 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] ease-in-out duration-500"
-              : "fixed -right-[100%]  top-0 ease-in-out duration-500 scale-125"
+              ? "fixed  right-0 z-50 top-0 h-screen w-[325px] max-w-[90%] bg-[#0c234b] ease-in-out duration-500 lg:hidden"
+              : "fixed -right-[100%]  top-0 ease-in-out duration-500 "
           }
         >
           <div
             className={
               isMenuOpen
                 ? "flex justify-between items-center px-5 py-2 bg-red-900 text-white"
-                : "hidden"
+                : ""
             }
           >
             <Link href="/" onClick={handleToggle}>
