@@ -3,13 +3,13 @@ import UpperNav from "./UpperNav";
 import Logo from "./Logo";
 import DesktopNav from "./DesktopNav";
 
-export default function Navbar() {
+export default function Navbar({ closeMenu }: { closeMenu: any }) {
   return (
-    <div className="">
+    <div className="" onClick={closeMenu}>
       <UpperNav />
       <Logo />
       <hr />
-      <DesktopNav />
+      <DesktopNav closeMenu={closeMenu} />
       <hr />
     </div>
   );
