@@ -17,10 +17,9 @@ const config: Config = {
         tablet: "991px",
         laptop: "1200px",
       },
-      // container: {
-      //   center: true,
-      //   padding: "2rem",
-      // },
+    },
+    backgroundImage: {
+      hero: "url('/assets/images/h3.jpg')",
     },
   },
   plugins: [],
